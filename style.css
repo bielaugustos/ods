@@ -29,6 +29,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+a{
+  text-decoration: none;
+}
+
 body{
   background: linear-gradient(270deg, #8d00bf, #009bbf, #ff9b2a, #2cff4b);
   background-size: 600% 600%;
@@ -45,8 +49,51 @@ body{
 }
 
 .main{
-  height: 100vh;
+  height: 80vh;
 }
+
+.titleods{
+  display: block;
+  margin: 2rem 0 0 2rem;  
+}
+
+h1 {
+  --offset: 400px;
+  color: var(--first-color);
+  font-size: 48px;
+}
+  span {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/spectrum.svg);
+    background-repeat: repeat-x;
+    background-size: 100vw 0.2em;
+    background-position: left bottom 5px;
+    background-position-x: var(--scrollPos);
+    &:nth-of-type(2) {
+    background-position-x: calc(var(--offset) + var(--scrollPos));
+    }
+  }
+
+.btn-know-more{
+  width: 180px;
+  text-align: left;
+  border: none;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 10px;
+  background-color: var(--white);
+  color: var(--first-color);
+  cursor: pointer;
+  transition: all .4s;
+  font-family: 'Roboto' sans-serif;
+
+  margin-top: 50px;
+}
+
+.btn-know-more:hover{
+  background-color: var(--hover-white);
+
+}
+
 
 .box{
   height: 400px;
@@ -113,22 +160,12 @@ body{
 
 .left_container p {
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 1.8rem;
   text-transform: uppercase;
 }
 
-a{
-  text-decoration: none;
-  color: var(--white);
-  text-decoration: none;
-  margin-top: 5rem;
-  font-size: 12px;
-}
 
-a:hover{
-  color: var(--hover-white)
-}
 
 
 .left_container .skills div{
@@ -147,13 +184,12 @@ a:hover{
 .skills div:hover{
   background: var(--hover-white);
   transition: all .4s;
-  margin-top: 30px;
 
 }
 
 .left_container .icons{
   font-size: 1.6rem;
-  margin-top: 230px;
+  margin-top: 10px;
 }
 
 
