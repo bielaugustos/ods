@@ -1,56 +1,59 @@
-body{
-    margin: 0 ;
-    padding: 0;
+*, *::before, *::after { box-sizing:border-box }
+
+body {
+	margin:0;
+    background:rgb(255, 255, 255);
 }
 
-.image-container {
-    margin: 0;
-    width: 100%; /* Ajuste o tamanho conforme necessário */
-    height: 100vh; /* Ajuste o tamanho conforme necessário */
-    overflow: hidden; /* Oculta qualquer parte da imagem que exceda as dimensões do contêiner */
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    
-}
-
-img {
-    width: 130%;
-    height: 130%;
-    opacity: 98%;
-    filter: blur(200px); /* Ajuste o valor para controlar a quantidade de desfoque */
-    animation: rotate 100s linear infinite; /* Adicione a animação de rotação */
-
-}
-
-.image-container::before,
-.image-container::after {
-    content: "";
-    position: relative; /* Permite posicionamento absoluto dos pseudo-elementos */
-    width: 100vh; /* Ajuste a largura do brilho nas extremidades */
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.6); /* Ajuste a cor e a opacidade do brilho */
-}
-
-.image-container::before {
-    left: 0;
-    top: 0;
-}
-
-.image-container::after {
-    right: 0;
-    top: 0;
-}
-
-h1{
-    color: #000;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg); /* Rotação inicial de 0 graus */
+.shape {
+  margin:0 auto;
+  aspect-ratio: 1;
+  position:relative;
+  
+  --width: 100%;
+  --scale: 1.5;
+  --opacity: 0.66;
+  --top: 0;
+  --left:0;
+  --path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  --background: linear-gradient( hotpink, red, orange, yellow, hotpink);
+  
+  --offset: 0deg;
+  --speed: 8000ms;
+  
+  clip-path: var(--path);
+  background: var(--background);
+  scale: var(--scale);
+  opacity: var(--opacity);
+  width:var(--width);
+  top:var(--top);
+  left:var(--left);
+  rotate: var(--offset);
+  
+  mix-blend-mode: difference;
+  
+  animation: turn var(--speed) linear forwards infinite;
+  
+  @keyframes turn {
+    to {
+      rotate: calc( var(--offset) + 1turn);
     }
-    100% {
-        transform: rotate(360deg); /* Rotação completa de 360 graus */
-    }
+  }
+}
+
+.blur-container {
+  
+  --blur: 40px;
+  filter: blur( var(--blur) );
+  height:100vh;
+  width:100%;
+  
+  display: grid;
+  > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+  
+  overflow:hidden;
+  
 }
