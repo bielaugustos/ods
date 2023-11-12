@@ -1,9 +1,9 @@
 hello codespace !
 
-como fiz o background gradiente animado?
+como fiz o background gradiente animado :
 https://www.gradient-animator.com/
 
-biblioteca de icones utilizada:
+biblioteca de icones utilizada :
 https://phosphoricons.com/
 
 links externos:
