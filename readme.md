@@ -1,23 +1,21 @@
-hello codespace !
+`Objetivos do Desenvolvimento Sustentável (ODS)`
 
-como fiz o background gradiente animado :
-https://www.gradient-animator.com/
+Simples galeria responsiva com cards dos ODS em Html, Css e JavaScript.
 
-biblioteca de icones utilizada :
+![Alt text](assets/Objetivos-do-Desenvolvimento-Sustent%C3%A1vel-Pessoal-%E2%80%94-Microsoft_-Edge-2023-12-17-08-57-17.gif)
+
+### Fontes :
+
+Biblioteca de icones :
 https://phosphoricons.com/
 
-links externos:
+Referências :
 https://brasil.un.org/pt-br/sdgs
 
-algumas ideias para implementar:
+Ideias para implementar :
 
-[ ] cards de todos os objetivos do desenvolvimento sustentavel (responsivo)
-[ ] blur no background simulando efeito glassmorphism (inspirado na marca da maçã)
-[ ] página de 'saiba mais' com inteligencia artificial (ia), onde a ia descreveria sobre o ods
-[ ] na mesma página onde a ia descreveria sobre o ods, realizar integração com chat-gpt para perguntas
 
-![Alt text](<assets/ods (1).png>)
-![Alt text](<assets/ods (2).png>)
-![Alt text](<assets/ods (3).png>)
-![Alt text](<assets/ods (4).png>)
+- [  ] Cards de todos os objetivos do Desenvolvimento Sustentavel (Continuar Responsivo);<br>
+- [  ] Blur no background simulando efeito glassmorphism;<br>
+- [  ] Campo de 'saiba mais' com inteligencia artificial (IA) - Integração de API do Chat-GPT para perguntas limitadas aos ODS;
 
